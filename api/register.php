@@ -2,7 +2,6 @@
   
   include('./db_manager.php');
   $json = json_decode(file_get_contents('php://input'), true);
-  //echo 'URL: ' . $json['url'];
   $url = $json['url'];
 
   if(!$url){
