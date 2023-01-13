@@ -1,0 +1,138 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container{
+  max-width: 400px;
+}
+
+h2{
+  margin-top: 8px;
+  font-family: sans-serif;
+  background: linear-gradient(-90deg, rgb(255, 255, 0), rgb(255, 70, 70));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  font-weight: 600;
+}
+
+#tm{
+  font-family: sans-serif;
+  font-weight: 600;
+  color: rgb(203, 203, 203);
+}
+
+input[type="text"], input[type="text"]:focus{
+  color: rgb(206, 206, 206);
+  --background-color: var(--form-element-disabled-background-color);
+  --border-color: var(--form-element-disabled-border-color);
+  border: 0;
+  padding: 20px;
+}
+
+.img-button{
+  width: 28px;
+  margin-top: -2px;
+  margin-right: 5px;
+}
+
+button{
+  background-color: rgb(124, 170, 77);
+  border: 0;
+  margin-top: 2px;
+}
+
+.t-header{
+  width: auto;
+  height: auto;
+  margin-bottom: 35px;
+}
+
+h1,h2,h3,h4,h5,h6{
+  margin: 0px 0px 0px;
+}
+
+.img-github{
+  width: 36px;
+  margin-top: -8px;
+  margin-left: 10px;
+  cursor: pointer;
+  animation-name: img-github;
+  animation-duration: 3s;
+}
+
+.img-github:hover{
+  width: 38px;
+}
+
+@keyframes img-github {
+  from {
+    opacity: 0.1;
+    transform: rotate(0deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(360deg);
+  }
+}
+
+#message{
+  position: relative;
+  top: -40px;
+  height: auto;
+  background-color: rgb(36, 42, 57);
+  padding: 10px;
+  padding-left: 20px;
+  border-radius: 5px;
+  animation-name: message;
+  animation-duration: 1.5s;
+}
+
+@keyframes message {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+    content-visibility: hidden;
+  }
+}
+
+#message > label{
+  margin-top: 4px;
+  margin-right: 4px;
+  width: auto;
+  display: inline-block;
+  margin-left: 6px;
+}
+
+.img-message{
+  width: 25px;
+  display: inline-block;
+  margin-bottom: 4.5px;
+}
+
+.t-header > h2 > a{
+  background-color: transparent;
+}
+
+.img-clip{
+  width: 25px;  
+  position: absolute;
+  display: block;
+  bottom: 1.9rem;
+  right: .8rem;
+  user-select: none;
+  cursor: pointer;
+}
+
+.box-link{
+  position: relative;
+}

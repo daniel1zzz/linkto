@@ -1,0 +1,42 @@
+.text-loading{
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.box-loading{
+  padding: 30px;
+  border-radius: 5px;
+  background-color: rgb(32, 40, 49);
+}
+
+.loader {
+  margin: auto;
+  border: 10px solid rgb(59, 74, 90);
+  border-radius: 50%;
+  border-top: 10px solid #9bff59;
+  width: 60px;
+  height: 60px;
+  animation: spinner 2s linear infinite;
+}
+
+@keyframes spinner {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.l-created {
+  opacity: 0.3;
+  position: absolute;
+  top: 50px;
+}
+
+.l-g-s{
+  font-size: 17px;
+  margin-top: 5px;
+}
+
+.img-s{
+  width: 60px;
+  height: 60px;
+  margin-left: 19%;
+}
