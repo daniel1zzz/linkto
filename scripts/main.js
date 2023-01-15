@@ -61,13 +61,14 @@ document.querySelector('#btn-created').addEventListener('click', () => {
   if(validURL(url)) {
     post('/api/register.php', {url: url}, (data) => {
       if(data.ok) {
+        modalActive(true,'Done URL generated successfully!');
+        activeCopy();
         $urlGenerated.value = location.href + 'open?id=' + data.link;
       } else {
         alert('Oops... an error occurred: ' + data.error);
+        modalActive(false,'Server error!');
       }
     });
-    modalActive(true,'Done URL generated successfully!');
-    activeCopy();
   } else {
     modalActive(false,'Please enter a valid URL');
     $urlOriginal.setAttribute('aria-invalid','true');
