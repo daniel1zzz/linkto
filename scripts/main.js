@@ -22,9 +22,22 @@ const activeCopy = () => {
 }
 const copyToClipboard = () => {
   const text = document.querySelector('.box-link > input').value;
-  navigator.clipboard.writeText(text).then(() => {
+  const textArea = document.createElement("textarea");
+  textArea.value = text;
+  document.body.appendChild(textArea);
+  textArea.focus();
+  textArea.select();
+  try {
+    document.execCommand('copy');
     modalActive(true, 'Copied to clipboard successfully');
-  });
+  } catch (err) {
+    modalActive(false,'Unable to copy to clipboard!');
+  }
+  document.body.removeChild(textArea);
+  //Codigo solo funciona para https 
+  //navigator.clipboard.writeText(text).then(() => {
+  //  modalActive(true, 'Copied to clipboard successfully');
+  //});
 }
 const validURL = (miurl) => {
   var expression = /(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})/gi;
